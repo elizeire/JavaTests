@@ -6,7 +6,9 @@ import java.util.stream.Stream;
 
 
 /**
+ * Java8 Features
  * This question was removed from Stackoverflow by author
+ * This is a simple example to use Streams Filter 
  * @author Guilherme 
  *
  */
@@ -24,10 +26,10 @@ public class StreamsFilter {
 		System.out.println("--- List merged Integers and Strings ---");
 		mixedList.forEach(System.out::println);
 
-		Stream result = mixedList.stream().filter(value -> value.getClass().equals(String.class));
+		Stream result = mixedList.stream().filter(value -> value.getClass().equals(String.class));//lambda expression, method as value
 
 		System.out.println("--- List filtered Strings ---");
-		result.forEach(System.out::println);
+		result.forEach(System.out::println); //new java8 feature forEach and method reference :: 
 
 		result = mixedList.stream().filter(value -> value.getClass().equals(Integer.class));
 
